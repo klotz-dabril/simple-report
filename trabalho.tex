@@ -50,7 +50,6 @@ spacing=true,%
 tracking=true,%
 ]{microtype}
 %
-\usepackage{natbib}
 \usepackage[]{hyperref}
 %
 %
@@ -62,19 +61,31 @@ tracking=true,%
 %
 \newcounter{question}
 \setcounter{question}{1}
+\newcommand{\questlabel}{\textbf{Questão \thequestion.}\enspace}
+\newlength{\questlabelwidth}
 \newenvironment{question}
 [
 ]{
-	\ignorespaces %
-	\bigskip
-	\par
-	\noindent %
-	\textbf{Questão \thequestion.}%
+	\bigskip%
+	\noindent%
+	\settowidth{\questlabelwidth}{\questlabel}%
+	\hspace{-\questlabelwidth}%
+	\questlabel%
+	\ignorespaces%
 }{
-	\smallskip
-	\ignorespacesafterend %
-	\stepcounter{question} %
+	\smallskip%
+	\stepcounter{question}%
+	\ignorespacesafterend%
+	\par%
 }
+%
+%
+%
+\usepackage{lipsum}
+\newcommand{\oldlipsum}{\lipsum}
+\newcounter{lipsum}
+\setcounter{lipsum}{1}
+\newcommand{\lipsum}{\oldlipsum[\thelipsum]\stepcounter{lipsum}}
 %
 %
 %
