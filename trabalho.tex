@@ -1,0 +1,104 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\RequirePackage[l2tabu, orthodox]{nag}%
+%
+\documentclass[%% Classe Trabalho
+a4paper,% Tamanho da página
+draft,%%% Rascunho ou versão final
+]{trabalho}%%%%%%
+%
+%
+\usepackage[%%%%%%%%%%%%%%%% Pacote de notas de revisão
+obeyDraft,%%%%%%%%%% Se opção de classe draft notas exibidas
+colorinlistoftodos,% Lista de todo com cores
+]{todonotes}%%%%%%%%%%%%%%%%
+%
+\usepackage[%%%% Pacote da American Society of Mathmatics
+tbtags,% Alinha o número da eq. no final
+%fleqn,% Alinha as equações a esquerda
+]{amsmath}%%%%%%
+%\setlength{\mathindent}{0pt}% Equações rente a margem junto com a
+%                            % opção fleqn do amsmath.
+%
+\usepackage[%% inputenc
+utf8,% codificação
+]{inputenc}%%%
+%
+\usepackage[%%%%%%% babel
+brazilian,% idioma
+]{babel}%%%%%%%%%%%
+%
+\usepackage[% 
+T1,%%
+]{fontenc}%%%
+%
+\usepackage{lmodern}%% Enforça o uso da fonte Latin Modern
+%\usepackage{url}%%%%%% Suporte à url
+\usepackage{graphicx}% Pacote para figuras
+\usepackage{multirow}% Mescla colunas de tabelas
+\usepackage{booktabs}%
+%
+\usepackage[%
+final,%
+babel=true,%
+verbose=true,
+kerning=true,%
+spacing=true,%
+tracking=true,%
+]{microtype}
+%
+\usepackage{natbib}
+\usepackage[]{hyperref}
+%
+%
+%
+\usepackage{listings}% Codigo fonte.
+\renewcommand{\lstlistingname}{Saída}% Caption name.
+%
+%
+%
+\newcounter{question}
+\setcounter{question}{1}
+\newenvironment{question}
+[
+]{
+	\ignorespaces %
+	\bigskip
+	\par
+	\noindent %
+	\textbf{Questão \thequestion.}%
+}{
+	\smallskip
+	\ignorespacesafterend %
+	\stepcounter{question} %
+}
+%
+%
+%
+\author{Otto Raphael Klotz D'Abril}
+\title{Título}
+\coursename{}
+\coursenumber{}
+\studentnumber{}
+\instructor{}
+%
+%
+%
+\begin{document}
+%
+%
+\maketitle%%%%%% Faz o cabeçalho
+%%%%%%%%%%%%%%%%
+%\listoffigures% Lista de figuras
+%%%%%%%%%%%%%%%%
+%\todototoc%%%%% Inclui a lista de todo na lista de conteudo
+%\listoftodos%%% Faz a lista de todo
+%
+%
+<++>
+%
+%
+\end{document}
