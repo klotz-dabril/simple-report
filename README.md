@@ -15,7 +15,7 @@ Fornece o cabeçalho contendo:
 
 * Nome do professor responsável
 
-Para incluir a nova classe no path do compilador aconselha-se: /usr/share/texmf/tex/latex/trabalho.cls
+Para incluir a nova classe no path do compilador aconselha-se: /usr/share/texmf/tex/latex/simple_report.cls
 
 #### Template ####
 
@@ -27,4 +27,4 @@ A template fornece:
 
 * Um command para usar o pacote lipsum de forma simplificada
 
-Para que colocar a template no path dos file type plugin do vim recomenda-se: ~/.vim/ftplugin/latex-suite/templates/trabalho.tex
+Para que colocar a template no path dos file type plugin do vim recomenda-se: ~/.vim/ftplugin/latex-suite/templates/simple_report.tex
